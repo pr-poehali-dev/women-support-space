@@ -1,34 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const IRINA_PHOTO = "https://cdn.poehali.dev/projects/5a47bcfa-593e-404b-a1e5-22f719dc66db/files/fae2eb97-a77b-4c33-a16f-f325fc274626.jpg";
-
-const TARIFFS = [
-  {
-    id: "main",
-    name: "Основной",
-    price: "4 900 ₽ / мес",
-    features: [
-      "Закрытый клуб участниц",
-      "Еженедельные встречи в Zoom",
-      "Личная обратная связь от Ирины",
-      "Доступ к материалам и записям",
-      "Чат поддержки и общения",
-    ],
-    accent: true,
-  },
-  {
-    id: "guest",
-    name: "Гостевой",
-    price: "990 ₽",
-    features: [
-      "Одна открытая встреча",
-      "Знакомство с сообществом",
-      "Доступ на 7 дней",
-    ],
-    accent: false,
-  },
-];
+const IRINA_PHOTO = "https://cdn.poehali.dev/projects/5a47bcfa-593e-404b-a1e5-22f719dc66db/bucket/e0cb6d32-7906-4b2c-947a-47b1d1a5a3fb.jpg";
 
 export default function Index() {
   const [selectedTariff, setSelectedTariff] = useState("main");
@@ -50,12 +23,15 @@ export default function Index() {
       {/* NAV */}
       <nav className="fixed top-0 left-0 right-0 z-50 bg-background/80 backdrop-blur-sm border-b border-border">
         <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
-          <span className="font-cormorant text-xl font-light tracking-widest text-foreground/70 uppercase">
-            Ирина Плотникова
-          </span>
+          <div>
+            <span className="font-cormorant text-xl font-light tracking-widest text-foreground/70 uppercase block">
+              Ирина Плотникова
+            </span>
+            <span className="text-xs font-light tracking-[0.2em] text-muted-foreground">психолог</span>
+          </div>
           <button
             onClick={() => scrollTo("join")}
-            className="text-sm font-golos font-light tracking-wide text-primary hover:text-foreground transition-colors"
+            className="text-sm font-golos font-light tracking-wide text-primary border border-[hsl(350,40%,85%)] bg-[hsl(350,40%,97%)] px-4 py-2 hover:bg-[hsl(350,40%,93%)] transition-colors"
           >
             Вступить в клуб
           </button>
@@ -63,19 +39,22 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="pt-32 pb-24 px-6 max-w-5xl mx-auto">
+      <section className="pt-28 pb-12 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6 animate-fade-up animate-delay-1">
               Женский клуб
             </p>
-            <h1 className="font-cormorant text-5xl md:text-6xl font-light leading-tight mb-8 animate-fade-up animate-delay-2">
+            <h1 className="font-cormorant text-5xl md:text-6xl font-light leading-tight mb-6 animate-fade-up animate-delay-2">
               Пространство,<br />
               где хочется<br />
               <em>возвращаться</em>
             </h1>
-            <p className="text-base font-light leading-relaxed text-muted-foreground mb-10 max-w-sm animate-fade-up animate-delay-3">
-              Камерный клуб для женщин, которые хотят расти осознанно — без давления, суеты и пустых советов.
+            <p className="text-base font-light leading-relaxed text-foreground/80 mb-4 animate-fade-up animate-delay-3">
+              Поддерживающее пространство для женщин, которые хотят закрепить новое состояние, не откатываться назад и жить в контакте с собой каждый день.
+            </p>
+            <p className="text-base font-light leading-relaxed text-muted-foreground mb-8 max-w-sm animate-fade-up animate-delay-3">
+              Тёплый клуб для женщин, которые хотят расти осознанно — без давления, суеты и пустых советов.
             </p>
             <button
               onClick={() => scrollTo("join")}
@@ -90,7 +69,7 @@ export default function Index() {
               <img
                 src={IRINA_PHOTO}
                 alt="Ирина Плотникова"
-                className="w-full h-full object-cover"
+                className="w-full h-full object-cover object-top"
               />
             </div>
             <div className="absolute -bottom-4 -left-4 w-24 h-24 bg-accent/40 -z-10" />
@@ -103,20 +82,20 @@ export default function Index() {
       </div>
 
       {/* PHILOSOPHY */}
-      <section id="philosophy" className="py-24 px-6 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-4 mb-16">
+      <section id="philosophy" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-4 mb-10">
           <div className="md:col-span-1">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">О клубе</p>
             <h2 className="font-cormorant text-4xl font-light leading-snug">
               Философия<br />клуба
             </h2>
           </div>
-          <div className="md:col-span-2 flex flex-col justify-center gap-6 pt-4">
+          <div className="md:col-span-2 flex flex-col justify-center gap-5 pt-4">
             <p className="text-base font-light leading-relaxed text-muted-foreground">
-              Мы не торопимся. Клуб — это место, где можно выдохнуть, сверить ориентиры и почувствовать поддержку живых людей рядом.
+              Клуб — это место, где можно выдохнуть, сверить ориентиры и почувствовать поддержку живых людей рядом.
             </p>
             <p className="text-base font-light leading-relaxed text-muted-foreground">
-              Здесь нет марафонов с дедлайнами и обещаний быстрого результата. Только честный разговор, практика и сообщество, которое тебя видит.
+              Здесь нет марафонов со строгими сроками и обещаний быстрого результата. Только честный разговор, практика и сообщество, которое тебя видит. Мы не торопимся.
             </p>
           </div>
         </div>
@@ -140,35 +119,30 @@ export default function Index() {
       </div>
 
       {/* ABOUT IRINA */}
-      <section id="about" className="py-24 px-6 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-2 gap-16 items-start">
+      <section id="about" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Об Ирине</p>
-            <h2 className="font-cormorant text-4xl font-light leading-snug mb-8">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Об авторе</p>
+            <h2 className="font-cormorant text-4xl font-light leading-snug mb-6">
               Ирина<br />Плотникова
             </h2>
-            <div className="space-y-5 text-base font-light leading-relaxed text-muted-foreground">
-              <p>
-                Более 10 лет Ирина сопровождает женщин в поиске себя — через коучинг, групповую работу и личные практики.
+            <div className="text-base font-light leading-relaxed text-muted-foreground space-y-4">
+              <p>Я — Ирина Плотникова, психолог и сама прошла этот путь</p>
+              <div className="space-y-1">
+                <p className="font-medium text-foreground/80 mb-2">Я знаю, как это:</p>
+                <p>— терять себя и не понимать, где ты настоящая</p>
+                <p>— жить через «надо», даже когда внутри всё сопротивляется</p>
+                <p>— возвращаться к себе… и снова откатываться назад</p>
+              </div>
+              <div className="space-y-1">
+                <p className="font-medium text-foreground/80 mb-2">И моя задача здесь:</p>
+                <p>— быть рядом и не оставлять тебя одну в этом состоянии</p>
+                <p>— поддержать в моменты, когда тебе тяжело и ты снова хочешь «сдаться»</p>
+                <p>— помочь тебе не потерять себя снова и закрепить то, к чему ты приходишь</p>
+              </div>
+              <p className="italic text-foreground/60">
+                Это не про советы и указания, как тебе жить, а рядом, в контакте, по-настоящему
               </p>
-              <p>
-                Её подход — бережный и честный. Без инструментов давления, без искусственного позитива. Только то, что работает.
-              </p>
-              <p>
-                Клуб стал естественным продолжением этого пути — пространством, где каждая участница важна.
-              </p>
-            </div>
-            <div className="mt-10 grid grid-cols-3 gap-6">
-              {[
-                { num: "10+", label: "лет опыта" },
-                { num: "500+", label: "участниц" },
-                { num: "4", label: "года клубу" },
-              ].map((s) => (
-                <div key={s.label}>
-                  <div className="font-cormorant text-4xl font-light text-primary">{s.num}</div>
-                  <div className="text-xs text-muted-foreground mt-1 font-light">{s.label}</div>
-                </div>
-              ))}
             </div>
           </div>
           <div className="bg-card border border-border p-10 flex flex-col gap-5">
@@ -186,49 +160,145 @@ export default function Index() {
       </div>
 
       {/* TARIFFS */}
-      <section id="tariffs" className="py-24 px-6 max-w-5xl mx-auto">
-        <div className="mb-14">
+      <section id="tariffs" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="mb-10">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Участие</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Форматы участия</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-          {TARIFFS.map((t) => (
-            <div
-              key={t.id}
-              className={`p-10 border transition-all duration-300 cursor-pointer ${
-                t.accent
-                  ? "bg-primary text-primary-foreground border-primary"
-                  : "bg-card border-border hover:border-accent"
-              }`}
-              onClick={() => {
-                setSelectedTariff(t.id);
-                scrollTo("join");
-              }}
-            >
-              <div className="flex items-start justify-between mb-8">
-                <div>
-                  <p className={`text-xs uppercase tracking-[0.2em] mb-2 ${t.accent ? "text-primary-foreground/60" : "text-muted-foreground"}`}>
-                    {t.id === "main" ? "Основной" : "Пробный"}
-                  </p>
-                  <h3 className="font-cormorant text-3xl font-light">{t.name}</h3>
-                </div>
-                <div className="text-right">
-                  <div className="font-cormorant text-2xl font-light">{t.price}</div>
-                </div>
-              </div>
-              <ul className="space-y-3 mb-8">
-                {t.features.map((f) => (
-                  <li key={f} className="flex items-start gap-3 text-sm font-light">
-                    <Icon name="Check" size={14} className={`mt-0.5 shrink-0 ${t.accent ? "text-primary-foreground/70" : "text-primary"}`} />
-                    <span className={t.accent ? "text-primary-foreground/90" : "text-foreground"}>{f}</span>
-                  </li>
-                ))}
-              </ul>
-              <div className={`text-sm font-light tracking-wide flex items-center gap-2 ${t.accent ? "text-primary-foreground" : "text-primary"}`}>
-                Выбрать тариф <Icon name="ArrowRight" size={14} />
-              </div>
+
+          {/* MAIN TARIFF */}
+          <div
+            className="p-10 border bg-primary text-primary-foreground border-primary cursor-pointer transition-all duration-300 hover:opacity-95"
+            onClick={() => { setSelectedTariff("main"); scrollTo("join"); }}
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/60 mb-1">Основной тариф</p>
+            <h3 className="font-cormorant text-3xl font-light mb-1">9 месяцев</h3>
+            <p className="text-sm font-light text-primary-foreground/80 mb-6 leading-relaxed">
+              Пространство, где ты живёшь в поддержке и не возвращаешься в прежнее состояние
+            </p>
+            <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">Что внутри:</p>
+            <ul className="space-y-2 mb-6">
+              {[
+                "Еженедельные встречи, где ты разбираешь свои реальные ситуации",
+                "Разборы состояний, в которых ты теряешь себя и не понимаешь, что с тобой происходит",
+                "Поддержка в чате, чтобы ты не оставалась одна и не откатывалась обратно",
+                "Практики и объяснения, которые помогают тебе применять это в жизни",
+                "«Записи и практики», чтобы ты могла возвращаться и закреплять изменения",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm font-light">
+                  <Icon name="Check" size={14} className="mt-0.5 shrink-0 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/90">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">Результат:</p>
+            <ul className="space-y-2 mb-8">
+              {[
+                "Ты не откатываешься обратно в прежнее состояние",
+                "Быстрее выходишь из тяжёлых состояний и не застреваешь в них",
+                "Продолжаешь выбирать себя в жизни, а не только понимать это",
+                "Чувствуешь стабильность и внутреннюю опору",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm font-light">
+                  <Icon name="Sparkles" size={14} className="mt-0.5 shrink-0 text-primary-foreground/70" />
+                  <span className="text-primary-foreground/90">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="font-cormorant text-3xl font-light mb-4">35 000 ₽ / 9 месяцев</div>
+            <div className="text-sm font-light tracking-wide flex items-center gap-2 text-primary-foreground">
+              Вступить в клуб <Icon name="ArrowRight" size={14} />
             </div>
-          ))}
+          </div>
+
+          {/* GUEST TARIFF */}
+          <div
+            className="p-10 border bg-card border-border hover:border-accent cursor-pointer transition-all duration-300"
+            onClick={() => { setSelectedTariff("guest"); scrollTo("join"); }}
+          >
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-1">Гостевой доступ</p>
+            <h3 className="font-cormorant text-3xl font-light mb-1">1 месяц</h3>
+            <p className="text-sm font-light text-muted-foreground mb-6 leading-relaxed">
+              Формат, чтобы попробовать и почувствовать, как это — быть в поддержке
+            </p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Ты сможешь:</p>
+            <ul className="space-y-2 mb-5">
+              {[
+                "Прийти на встречи и разобрать свою ситуацию",
+                "Задать свои вопросы и получить ответы под свою жизнь",
+                "Почувствовать атмосферу и формат работы",
+                "Получить первые изменения и увидеть, как это работает",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm font-light">
+                  <Icon name="Check" size={14} className="mt-0.5 shrink-0 text-primary" />
+                  <span className="text-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Без доступа:</p>
+            <ul className="space-y-2 mb-5">
+              {[
+                "К полной базе «Записи и практики»",
+                "К глубокой части клуба",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm font-light">
+                  <Icon name="Minus" size={14} className="mt-0.5 shrink-0 text-muted-foreground" />
+                  <span className="text-muted-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Результат:</p>
+            <ul className="space-y-2 mb-8">
+              {[
+                "Становится легче в теле и внутри",
+                "Появляется ощущение, что ты не одна",
+                "Начинаешь замечать, где теряешь себя",
+                "Появляются первые реальные изменения",
+              ].map((f) => (
+                <li key={f} className="flex items-start gap-3 text-sm font-light">
+                  <Icon name="Sparkles" size={14} className="mt-0.5 shrink-0 text-primary" />
+                  <span className="text-foreground">{f}</span>
+                </li>
+              ))}
+            </ul>
+            <div className="font-cormorant text-3xl font-light text-foreground mb-4">6 000 ₽</div>
+            <div className="text-sm font-light tracking-wide flex items-center gap-2 text-primary">
+              Попробовать клуб <Icon name="ArrowRight" size={14} />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6">
+        <div className="h-px bg-border" />
+      </div>
+
+      {/* FOR YOU */}
+      <section id="foryou" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="bg-card border border-border p-10 md:p-14 max-w-2xl mx-auto text-center">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Для кого</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug mb-8">
+            Этот клуб для тебя, если:
+          </h2>
+          <div className="text-base font-light leading-relaxed text-muted-foreground space-y-2 text-left max-w-sm mx-auto mb-8">
+            <p>— ты устала всё проживать одна</p>
+            <p>— устала начинать и снова откатываться</p>
+            <p>— и хочешь наконец удержать себя</p>
+          </div>
+          <p className="text-base font-light leading-relaxed text-muted-foreground mb-8">
+            Тебе не нужно снова искать, разбираться и начинать с нуля. Можно быть в поддержке, не откатываться и идти к себе спокойно.
+          </p>
+          <p className="font-cormorant text-xl font-light italic text-foreground/70 mb-10">
+            Если у тебя в теле, особенно в груди, откликается сжатием, тяжестью или, наоборот, теплом и лёгкостью — значит тебе сюда
+          </p>
+          <button
+            onClick={() => scrollTo("join")}
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
+          >
+            Хочу в клуб
+            <Icon name="ArrowRight" size={16} />
+          </button>
         </div>
       </section>
 
@@ -237,32 +307,48 @@ export default function Index() {
       </div>
 
       {/* JOIN FORM */}
-      <section id="join" className="py-24 px-6 max-w-5xl mx-auto">
+      <section id="join" className="py-12 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Вступление</p>
-            <h2 className="font-cormorant text-4xl font-light leading-snug mb-6">
+            <h2 className="font-cormorant text-4xl font-light leading-snug mb-4">
               Оставьте заявку
             </h2>
             <p className="text-base font-light leading-relaxed text-muted-foreground mb-8">
-              Ирина лично рассматривает каждую заявку и свяжется с вами в течение дня.
+              Я лично свяжусь с вами в течение дня.
             </p>
-            <div className="space-y-6">
-              {[
-                { icon: "MessageCircle", label: "Telegram", value: "@irina_plotnikova" },
-                { icon: "Instagram", label: "Instagram", value: "@plotnikova.club" },
-                { icon: "Mail", label: "Email", value: "hello@plotnikova.club" },
-              ].map((c) => (
-                <div key={c.label} className="flex items-center gap-4">
-                  <div className="w-10 h-10 flex items-center justify-center border border-border">
-                    <Icon name={c.icon} fallback="Circle" size={16} className="text-primary" />
-                  </div>
-                  <div>
-                    <div className="text-xs text-muted-foreground font-light">{c.label}</div>
-                    <div className="text-sm font-light">{c.value}</div>
-                  </div>
+            <div className="space-y-4">
+              <p className="text-sm font-light text-muted-foreground">Или напишите мне напрямую:</p>
+              <a
+                href="https://t.me/irina151718"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 border border-border bg-card hover:border-accent transition-colors group"
+              >
+                <div className="w-10 h-10 flex items-center justify-center bg-[#2AABEE]/10">
+                  <Icon name="Send" size={18} className="text-[#2AABEE]" />
                 </div>
-              ))}
+                <div>
+                  <div className="text-sm font-medium">Telegram</div>
+                  <div className="text-xs text-muted-foreground font-light">@irina151718</div>
+                </div>
+                <Icon name="ArrowRight" size={14} className="ml-auto text-muted-foreground group-hover:translate-x-1 transition-transform" />
+              </a>
+              <a
+                href="https://max.ru/u/f9LHodD0cOIDJO7b3GsFDqo7AwyJ6K_ZfksSWOiFwxRekcOz8X-iY9E9bvQ"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-4 p-4 border border-border bg-card hover:border-accent transition-colors group"
+              >
+                <div className="w-10 h-10 flex items-center justify-center bg-primary/10">
+                  <Icon name="MessageSquare" size={18} className="text-primary" />
+                </div>
+                <div>
+                  <div className="text-sm font-medium">Max</div>
+                  <div className="text-xs text-muted-foreground font-light">Написать в Max</div>
+                </div>
+                <Icon name="ArrowRight" size={14} className="ml-auto text-muted-foreground group-hover:translate-x-1 transition-transform" />
+              </a>
             </div>
           </div>
 
@@ -282,7 +368,10 @@ export default function Index() {
                     Тариф
                   </label>
                   <div className="grid grid-cols-2 gap-3">
-                    {TARIFFS.map((t) => (
+                    {[
+                      { id: "main", name: "Основной", price: "35 000 ₽" },
+                      { id: "guest", name: "Гостевой", price: "6 000 ₽" },
+                    ].map((t) => (
                       <button
                         key={t.id}
                         type="button"
@@ -303,9 +392,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">
-                    Имя
-                  </label>
+                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">Имя</label>
                   <input
                     type="text"
                     required
@@ -317,9 +404,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">
-                    Email
-                  </label>
+                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">Email</label>
                   <input
                     type="email"
                     required
@@ -331,9 +416,7 @@ export default function Index() {
                 </div>
 
                 <div>
-                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">
-                    Телефон
-                  </label>
+                  <label className="text-xs uppercase tracking-[0.2em] text-muted-foreground block mb-2">Телефон</label>
                   <input
                     type="tel"
                     placeholder="+7 (___) ___-__-__"
@@ -351,6 +434,27 @@ export default function Index() {
                   <Icon name="ArrowRight" size={16} />
                 </button>
 
+                <div className="grid grid-cols-2 gap-3">
+                  <a
+                    href="https://t.me/irina151718"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border border-[#2AABEE]/40 bg-[#2AABEE]/5 text-[#2AABEE] py-3.5 text-sm font-light hover:bg-[#2AABEE]/10 transition-colors"
+                  >
+                    <Icon name="Send" size={15} />
+                    Telegram
+                  </a>
+                  <a
+                    href="https://max.ru/u/f9LHodD0cOIDJO7b3GsFDqo7AwyJ6K_ZfksSWOiFwxRekcOz8X-iY9E9bvQ"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 border border-border bg-card text-primary py-3.5 text-sm font-light hover:border-accent transition-colors"
+                  >
+                    <Icon name="MessageSquare" size={15} />
+                    Max
+                  </a>
+                </div>
+
                 <p className="text-xs text-muted-foreground font-light text-center">
                   Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
                 </p>
@@ -361,7 +465,7 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border py-10 px-6">
+      <footer className="border-t border-border py-8 px-6">
         <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
           <span className="font-cormorant text-lg font-light tracking-widest text-foreground/50 uppercase">
             Ирина Плотникова
