@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Icon from "@/components/ui/icon";
 
-const IRINA_PHOTO = "https://cdn.poehali.dev/projects/5a47bcfa-593e-404b-a1e5-22f719dc66db/bucket/e0cb6d32-7906-4b2c-947a-47b1d1a5a3fb.jpg";
+const IRINA_PHOTO = "https://cdn.poehali.dev/projects/5a47bcfa-593e-404b-a1e5-22f719dc66db/bucket/9cccb9ed-ce76-498f-88d7-9e6e2fadac73.jpg";
 
 export default function Index() {
   const [selectedTariff, setSelectedTariff] = useState("main");
@@ -53,9 +53,6 @@ export default function Index() {
             <p className="text-base font-light leading-relaxed text-foreground/80 mb-4 animate-fade-up animate-delay-3">
               Поддерживающее пространство для женщин, которые хотят закрепить новое состояние, не откатываться назад и жить в контакте с собой каждый день.
             </p>
-            <p className="text-base font-light leading-relaxed text-muted-foreground mb-8 max-w-sm animate-fade-up animate-delay-3">
-              Тёплый клуб для женщин, которые хотят расти осознанно — без давления, суеты и пустых советов.
-            </p>
             <button
               onClick={() => scrollTo("join")}
               className="animate-fade-up animate-delay-4 inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
@@ -77,9 +74,7 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border" />
-      </div>
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* PHILOSOPHY */}
       <section id="philosophy" className="py-12 px-6 max-w-5xl mx-auto">
@@ -92,11 +87,13 @@ export default function Index() {
           </div>
           <div className="md:col-span-2 flex flex-col justify-center gap-5 pt-4">
             <p className="text-base font-light leading-relaxed text-muted-foreground">
-              Клуб — это место, где можно выдохнуть, сверить ориентиры и почувствовать поддержку живых людей рядом.
+              Это не глубокая терапия — это пространство, где ты закрепляешь изменения и учишься не возвращаться в прежнее состояние:
             </p>
-            <p className="text-base font-light leading-relaxed text-muted-foreground">
-              Здесь нет марафонов со строгими сроками и обещаний быстрого результата. Только честный разговор, практика и сообщество, которое тебя видит. Мы не торопимся.
-            </p>
+            <div className="space-y-2 text-base font-light leading-relaxed text-muted-foreground">
+              <p>— ты не копаешься в причинах, а учишься справляться с тем, что происходит с тобой прямо сейчас</p>
+              <p>— ты учишься жить уже по-новому и выбирать себя в реальных ситуациях, а не только понимать это</p>
+              <p>— ты не откатываешься назад, потому что рядом есть поддержка и ты знаешь, что делать в сложные моменты</p>
+            </div>
           </div>
         </div>
         <div className="grid md:grid-cols-3 gap-6">
@@ -114,18 +111,67 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border" />
-      </div>
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+
+      {/* HOW WORK HAPPENS */}
+      <section id="how" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Формат</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Как проходит<br />работа в клубе</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6 mb-8">
+          {[
+            {
+              icon: "Video",
+              title: "Живые встречи",
+              desc: "Еженедельные встречи, где ты не просто слушаешь, а разбираешь свои реальные ситуации",
+            },
+            {
+              icon: "Brain",
+              title: "Разборы состояний",
+              desc: "Разборы твоих переживаний, в которых ты теряешь себя, и ответы — что с тобой происходит и как из этого выходить",
+            },
+            {
+              icon: "MessageCircle",
+              title: "Поддержка в чате",
+              desc: "Поддержка в чате, чтобы ты не оставалась одна и не откатывалась обратно",
+            },
+          ].map((item) => (
+            <div key={item.title} className="p-8 bg-card border border-border hover:border-accent transition-colors duration-300">
+              <Icon name={item.icon} fallback="Circle" size={20} className="text-primary mb-4" />
+              <h3 className="font-cormorant text-2xl font-light mb-3">{item.title}</h3>
+              <p className="text-sm font-light leading-relaxed text-muted-foreground">{item.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Самое главное — работаем</p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— с твоим состоянием «здесь и сейчас», когда тебе тяжело и ты не понимаешь, что с тобой происходит</p>
+              <p>— с откатами в предыдущее состояние, чтобы ты не возвращалась снова в привычное «терплю и живу как раньше»</p>
+              <p>— с тревогой, виной, перегрузом, которые не дают тебе расслабиться и жить спокойно</p>
+              <p>— с моментами, где ты снова теряешь себя и выбираешь не себя</p>
+            </div>
+          </div>
+          <div className="p-8 bg-card border border-border">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">И тогда ты начинаешь</p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— быстрее возвращаться к себе и не застревать в том, что тебя выбивает</p>
+              <p>— не зависать в тяжёлых состояниях, а понимать, что с тобой происходит и как из этого выходить</p>
+              <p>— жить, а не просто «держаться», и постепенно чувствовать больше лёгкости внутри</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* ABOUT IRINA */}
       <section id="about" className="py-12 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Об авторе</p>
-            <h2 className="font-cormorant text-4xl font-light leading-snug mb-6">
-              Ирина<br />Плотникова
-            </h2>
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Об авторе</p>
             <div className="text-base font-light leading-relaxed text-muted-foreground space-y-4">
               <p>Я — Ирина Плотникова, психолог и сама прошла этот путь</p>
               <div className="space-y-1">
@@ -155,9 +201,105 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border" />
-      </div>
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+
+      {/* FOR WHOM */}
+      <section id="forwhom" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Аудитория</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Кому подойдёт</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Это для тебя, если:</p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— ты уже понимаешь, что живёшь не так, как хочешь</p>
+              <p>— у тебя бывают откаты: сегодня легче — завтра снова тяжело</p>
+              <p>— ты начинаешь выбирать себя, но потом снова «скатываешься в надо»</p>
+              <p>— ты устала всё проживать в одиночку</p>
+              <p>— тебе не хватает поддержки и понимания</p>
+            </div>
+            <p className="mt-6 text-sm font-light italic text-foreground/60">
+              «Я вроде уже понимаю… но почему снова возвращаюсь туда же?»
+            </p>
+          </div>
+          <div className="p-8 bg-card border border-border">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Ты скорее всего пробовала:</p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— разбираться сама, что с тобой происходит, пытаться понять «почему я так живу»</p>
+              <p>— читать книги по саморазвитию, искать ответы, но в жизни ничего не меняется</p>
+              <p>— смотреть вебинары и мастер-классы психологов</p>
+              <p>— слушать советы подруг, делиться, получать поддержку</p>
+              <p>— терпеть, молчать и тащить всё на себе изо всех сил</p>
+            </div>
+            <p className="mt-6 text-sm font-light leading-relaxed text-foreground/70">
+              Но этого хватает ненадолго, потому что ты остаёшься с этим одна и не понимаешь, как удержать себя в этом состоянии
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+
+      {/* RESULT */}
+      <section id="result" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="mb-8">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Итог</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Какой результат<br />ты получишь</h2>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-8 bg-card border border-border">
+            <p className="text-sm font-light leading-relaxed text-muted-foreground mb-6">
+              Ты не просто «узнаешь что-то новое» — ты начнёшь жить в другом состоянии:
+            </p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— быстрее будешь выходить из откатов</p>
+              <p>— перестанешь снова проваливаться в «я всё тащу»</p>
+              <p>— начнёшь удерживать себя, а не терять</p>
+              <p>— почувствуешь: «я не одна, и мне больше не нужно со всем справляться самой»</p>
+            </div>
+          </div>
+          <div className="p-8 bg-primary text-primary-foreground border border-primary">
+            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/60 mb-5">И внутри появляется:</p>
+            <div className="space-y-4">
+              <p className="font-cormorant text-xl font-light text-primary-foreground">стабильность, а не качели</p>
+              <p className="font-cormorant text-xl font-light text-primary-foreground">спокойствие, которое становится устойчивым</p>
+              <p className="font-cormorant text-xl font-light text-primary-foreground">понимание, что с тобой происходит</p>
+            </div>
+            <p className="mt-8 text-sm font-light leading-relaxed text-primary-foreground/80 italic">
+              И самое важное: ты продолжаешь выбирать себя в жизни, а не только «на сессии»
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+
+      {/* WHAT IS PRODUCT */}
+      <section id="product" className="py-12 px-6 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-4 mb-10">
+          <div className="md:col-span-1">
+            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Продукт</p>
+            <h2 className="font-cormorant text-4xl font-light leading-snug">
+              Что это<br />за продукт
+            </h2>
+          </div>
+          <div className="md:col-span-2 flex flex-col justify-center gap-4 pt-4">
+            <p className="text-base font-light leading-relaxed text-muted-foreground">
+              Это живое пространство поддержки: не курс и не теория. Это формат, где ты:
+            </p>
+            <div className="space-y-2 text-base font-light leading-relaxed text-muted-foreground">
+              <p>— регулярно взаимодействуешь со мной и не остаёшься одна со своими переживаниями</p>
+              <p>— разбираешь свои состояния и начинаешь понимать, что с тобой происходит</p>
+              <p>— получаешь поддержку и не проваливаешься обратно в привычные реакции</p>
+              <p>— возвращаешь себя в «здесь и сейчас»</p>
+              <p>— учишься выбирать себя в реальных ситуациях</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* TARIFFS */}
       <section id="tariffs" className="py-12 px-6 max-w-5xl mx-auto">
@@ -166,8 +308,6 @@ export default function Index() {
           <h2 className="font-cormorant text-4xl font-light leading-snug">Форматы участия</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
-
-          {/* MAIN TARIFF */}
           <div
             className="p-10 border bg-primary text-primary-foreground border-primary cursor-pointer transition-all duration-300 hover:opacity-95"
             onClick={() => { setSelectedTariff("main"); scrollTo("join"); }}
@@ -212,7 +352,6 @@ export default function Index() {
             </div>
           </div>
 
-          {/* GUEST TARIFF */}
           <div
             className="p-10 border bg-card border-border hover:border-accent cursor-pointer transition-all duration-300"
             onClick={() => { setSelectedTariff("guest"); scrollTo("join"); }}
@@ -270,9 +409,7 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border" />
-      </div>
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* FOR YOU */}
       <section id="foryou" className="py-12 px-6 max-w-5xl mx-auto">
@@ -302,9 +439,7 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6">
-        <div className="h-px bg-border" />
-      </div>
+      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* JOIN FORM */}
       <section id="join" className="py-12 px-6 max-w-5xl mx-auto">
