@@ -419,7 +419,7 @@ export default function Index() {
                 <Icon name="CheckCircle" size={40} className="text-primary mb-6" />
                 <h3 className="font-cormorant text-3xl font-light mb-3">Спасибо за заявку!</h3>
                 <p className="text-sm font-light text-muted-foreground mb-8">
-                  Напишите мне — я отвечу в течение дня 🤍
+                  Напишите мне «Хочу в Клуб» — я отвечу в течение дня 🤍
                 </p>
                 <div className="w-full space-y-3">
                   <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
