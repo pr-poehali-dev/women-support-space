@@ -29,7 +29,7 @@ export default function Index() {
             <span className="font-cormorant text-xl font-light tracking-widest text-foreground/70 uppercase block">
               Ирина Пархоменко
             </span>
-            <span className="text-xs font-light tracking-[0.2em] text-muted-foreground">психолог</span>
+            <span className="text-xs font-light tracking-[0.2em] text-muted-foreground">психолог · психосоматолог</span>
           </div>
           <button
             onClick={() => scrollTo("join")}
