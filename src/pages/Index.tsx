@@ -55,12 +55,12 @@ export default function Index() {
             </p>
             <div className="mb-6 space-y-1 text-sm font-light text-muted-foreground animate-fade-up animate-delay-3">
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">Когда ты слишком долго:</p>
-              <p>— терпела</p>
-              <p>— молчала</p>
-              <p>— подстраивалась</p>
-              <p>— боялась обидеть или разозлить</p>
-              <p>— соглашалась, когда внутри было «не хочу»</p>
-              <p>— жила так, будто всё время нужно быть удобной и сильной</p>
+              <p>— терпишь</p>
+              <p>— молчишь</p>
+              <p>— подстраиваешься</p>
+              <p>— боишься обидеть или разозлить</p>
+              <p>— соглашаешься, когда внутри «не хочу»</p>
+              <p>— живёшь так, будто всё время нужно быть удобной и сильной</p>
             </div>
             <button
               onClick={() => scrollTo("join")}
