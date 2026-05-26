@@ -41,7 +41,7 @@ export default function Index() {
       </nav>
 
       {/* HERO */}
-      <section className="pt-28 pb-12 px-6 max-w-5xl mx-auto">
+      <section className="pt-24 pb-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16 items-center">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4 animate-fade-up animate-delay-1">
@@ -82,7 +82,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* NOTICED */}
-      <section className="py-12 px-6 max-w-5xl mx-auto">
+      <section className="py-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-8 bg-card border border-border">
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">И в какой-то момент заметила:</p>
@@ -112,7 +112,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* FOR WHOM */}
-      <section id="forwhom" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="forwhom" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="mb-8">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Аудитория</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Кому подойдёт</h2>
@@ -143,7 +143,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* WHAT HAPPENS */}
-      <section id="how" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="how" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="mb-8">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Формат</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Что происходит<br />в клубе</h2>
@@ -188,7 +188,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* RESULT */}
-      <section id="result" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="result" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="mb-8">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Итог</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Что ты получишь</h2>
@@ -216,7 +216,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* IMPORTANT */}
-      <section id="important" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="important" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-3 gap-4">
           <div className="md:col-span-1">
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Важно</p>
@@ -240,7 +240,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* ABOUT */}
-      <section id="about" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="about" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-12 items-start">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Об авторе</p>
@@ -274,7 +274,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* TARIFFS */}
-      <section id="tariffs" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="tariffs" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="mb-10">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Участие</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Форматы участия</h2>
@@ -346,7 +346,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* FINAL BLOCK */}
-      <section id="final" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="final" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="bg-card border border-border p-10 md:p-14 max-w-2xl mx-auto text-center">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Для кого</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug mb-8">Этот клуб для тебя, если ты устала:</h2>
@@ -378,7 +378,7 @@ export default function Index() {
       <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
 
       {/* JOIN FORM */}
-      <section id="join" className="py-12 px-6 max-w-5xl mx-auto">
+      <section id="join" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-16">
           <div>
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Вступление</p>
