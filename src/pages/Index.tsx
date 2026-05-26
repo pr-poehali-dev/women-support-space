@@ -47,8 +47,8 @@ export default function Index() {
             <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4 animate-fade-up animate-delay-1">
               Женский клуб
             </p>
-            <h1 className="font-cormorant text-5xl md:text-6xl font-light leading-tight mb-6 animate-fade-up animate-delay-2">
-              «Я <em>Есть</em>»
+            <h1 className="font-golos text-5xl md:text-6xl font-light leading-tight mb-6 animate-fade-up animate-delay-2">
+              «Я Есть»
             </h1>
             <p className="text-base font-light leading-relaxed text-foreground/80 mb-6 animate-fade-up animate-delay-3">
               Пространство для женщин, которые устали жить в напряжении рядом с мужчиной и хотят снова почувствовать себя живыми.
