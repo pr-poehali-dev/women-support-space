@@ -435,17 +435,20 @@ export default function Index() {
       <section id="final" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="bg-card border border-border p-10 md:p-14">
           <h2 className="font-cormorant text-4xl font-light leading-snug mb-8 text-center">Этот клуб для тебя, если ты устала:</h2>
-          <div className="grid md:grid-cols-2 gap-6 mb-10">
-            <div className="space-y-1 text-base font-light leading-relaxed text-muted-foreground">
-              <p>— всё время держаться</p>
-              <p>— молчать о себе</p>
-              <p>— жить в тревоге и напряжении</p>
-              <p>— сжиматься рядом с мужчиной</p>
-              <p>— чувствовать, как жизнь проходит мимо</p>
+          <div className="grid md:grid-cols-2 gap-8 mb-10">
+            <div className="p-6 border border-border">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Если ты устала:</p>
+              <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
+                <p>— всё время держаться</p>
+                <p>— молчать о себе</p>
+                <p>— жить в тревоге и напряжении</p>
+                <p>— сжиматься рядом с мужчиной</p>
+                <p>— чувствовать, как жизнь проходит мимо</p>
+              </div>
             </div>
-            <div>
-              <p className="text-base font-light leading-relaxed text-muted-foreground mb-3">Здесь ты постепенно возвращаешь:</p>
-              <div className="space-y-1 text-base font-light leading-relaxed text-muted-foreground">
+            <div className="p-6 border border-primary bg-primary/5">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Здесь ты возвращаешь:</p>
+              <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
                 <p>— себя</p>
                 <p>— своё спокойствие</p>
                 <p>— лёгкость в теле</p>
