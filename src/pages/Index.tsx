@@ -35,6 +35,13 @@ export default function Index() {
             </span>
             <span className="text-xs font-light tracking-[0.2em] text-muted-foreground">психолог · психосоматолог</span>
           </div>
+          <div className="hidden md:flex items-center gap-6 text-xs font-light tracking-wide text-muted-foreground">
+            <button onClick={() => scrollTo("forwhom")} className="hover:text-foreground transition-colors">Для кого</button>
+            <button onClick={() => scrollTo("how")} className="hover:text-foreground transition-colors">Клуб</button>
+            <button onClick={() => scrollTo("result")} className="hover:text-foreground transition-colors">Результат</button>
+            <button onClick={() => scrollTo("about")} className="hover:text-foreground transition-colors">Об авторе</button>
+            <button onClick={() => scrollTo("tariffs")} className="hover:text-foreground transition-colors">Тарифы</button>
+          </div>
           <button
             onClick={() => scrollTo("join")}
             className="text-sm font-golos font-light tracking-wide text-primary border border-[hsl(350,40%,85%)] bg-[hsl(350,40%,97%)] px-4 py-2 hover:bg-[hsl(350,40%,93%)] transition-colors"
@@ -426,36 +433,42 @@ export default function Index() {
 
       {/* FINAL BLOCK */}
       <section id="final" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="bg-card border border-border p-10 md:p-14 max-w-2xl mx-auto text-center">
-          <h2 className="font-cormorant text-4xl font-light leading-snug mb-8">Этот клуб для тебя, если ты устала:</h2>
-          <div className="text-base font-light leading-relaxed text-muted-foreground space-y-1 text-left max-w-sm mx-auto mb-8">
-            <p>— всё время держаться</p>
-            <p>— молчать о себе</p>
-            <p>— жить в тревоге и напряжении</p>
-            <p>— сжиматься рядом с мужчиной</p>
-            <p>— чувствовать, как жизнь проходит мимо</p>
+        <div className="bg-card border border-border p-10 md:p-14">
+          <h2 className="font-cormorant text-4xl font-light leading-snug mb-8 text-center">Этот клуб для тебя, если ты устала:</h2>
+          <div className="grid md:grid-cols-2 gap-6 mb-10">
+            <div className="space-y-1 text-base font-light leading-relaxed text-muted-foreground">
+              <p>— всё время держаться</p>
+              <p>— молчать о себе</p>
+              <p>— жить в тревоге и напряжении</p>
+              <p>— сжиматься рядом с мужчиной</p>
+              <p>— чувствовать, как жизнь проходит мимо</p>
+            </div>
+            <div>
+              <p className="text-base font-light leading-relaxed text-muted-foreground mb-3">Здесь ты постепенно возвращаешь:</p>
+              <div className="space-y-1 text-base font-light leading-relaxed text-muted-foreground">
+                <p>— себя</p>
+                <p>— своё спокойствие</p>
+                <p>— лёгкость в теле</p>
+                <p>— вкус к жизни</p>
+              </div>
+            </div>
           </div>
-          <p className="text-base font-light leading-relaxed text-muted-foreground mb-3">Здесь ты постепенно возвращаешь:</p>
-          <div className="text-base font-light leading-relaxed text-muted-foreground space-y-1 text-left max-w-xs mx-auto mb-6">
-            <p>— себя</p>
-            <p>— своё спокойствие</p>
-            <p>— лёгкость в теле</p>
-            <p>— вкус к жизни</p>
+          <div className="text-center">
+            <p className="font-cormorant text-2xl font-light italic text-foreground/70 mb-6">«Я снова живая»</p>
+            <div className="text-sm font-light text-muted-foreground space-y-1 mb-10">
+              <p>Клуб «Я есть» — это место, где ты:</p>
+              <p>— не одна · не обязана быть сильной · не боишься откатов</p>
+              <p>— учишься жить по-новому</p>
+              <p className="italic mt-2">Не через «надо». А через жизнь.</p>
+            </div>
+            <button
+              onClick={() => scrollTo("join")}
+              className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
+            >
+              Хочу в клуб
+              <Icon name="ArrowRight" size={16} />
+            </button>
           </div>
-          <p className="font-cormorant text-2xl font-light italic text-foreground/70 mb-6">«Я снова живая»</p>
-          <div className="text-sm font-light text-muted-foreground space-y-1 mb-10">
-            <p>Клуб «Я есть» — это место, где ты:</p>
-            <p>— не одна · не обязана быть сильной · не боишься откатов</p>
-            <p>— учишься жить по-новому</p>
-            <p className="italic mt-2">Не через «надо». А через жизнь.</p>
-          </div>
-          <button
-            onClick={() => scrollTo("join")}
-            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
-          >
-            Хочу в клуб
-            <Icon name="ArrowRight" size={16} />
-          </button>
         </div>
       </section>
 
