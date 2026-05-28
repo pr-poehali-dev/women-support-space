@@ -434,7 +434,7 @@ export default function Index() {
       {/* FINAL BLOCK */}
       <section id="final" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="bg-card border border-border p-10 md:p-14">
-          <h2 className="font-cormorant text-4xl font-light leading-snug mb-8 text-center">Этот клуб для тебя, если ты устала:</h2>
+          <h2 className="font-cormorant text-4xl font-light leading-snug mb-8 text-center">Этот клуб для тебя:</h2>
           <div className="grid md:grid-cols-2 gap-8 mb-10">
             <div className="p-6 border border-border">
               <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">Если ты устала:</p>
