@@ -5,6 +5,10 @@ const IRINA_PHOTO = "https://cdn.poehali.dev/projects/5a47bcfa-593e-404b-a1e5-22
 const TG_LINK = "https://t.me/irina151718";
 const MAX_LINK = "https://max.ru/u/f9LHodD0cOIDJO7b3GsFDqo7AwyJ6K_ZfksSWOiFwxRekcOz8X-iY9E9bvQ";
 
+const Divider = () => (
+  <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+);
+
 export default function Index() {
   const [selectedTariff, setSelectedTariff] = useState("main");
   const [formData, setFormData] = useState({ name: "", email: "", phone: "" });
@@ -51,17 +55,8 @@ export default function Index() {
               «Я Есть»
             </h1>
             <p className="text-base font-light leading-relaxed text-foreground/80 mb-6 animate-fade-up animate-delay-3">
-              Пространство для женщин, которые устали жить в напряжении рядом с мужчиной и хотят снова почувствовать себя живыми.
+              Пространство для тех женщин, которые уже начали выходить из молчания, из напряжения, из жизни ради отношений и привычки терпеть — но у которых ещё нет укреплённой внутренней опоры и которые боятся откатиться назад.
             </p>
-            <div className="mb-6 space-y-1 text-sm font-light text-muted-foreground animate-fade-up animate-delay-3">
-              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-3">Когда ты слишком долго:</p>
-              <p>— терпишь</p>
-              <p>— молчишь</p>
-              <p>— подстраиваешься</p>
-              <p>— боишься обидеть или разозлить</p>
-              <p>— соглашаешься, когда внутри «не хочу»</p>
-              <p>— живёшь так, будто всё время нужно быть удобной и сильной</p>
-            </div>
             <button
               onClick={() => scrollTo("join")}
               className="animate-fade-up animate-delay-4 inline-flex items-center gap-3 bg-primary text-primary-foreground px-8 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
@@ -79,80 +74,99 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
-      {/* NOTICED */}
+      {/* NOT THERAPY */}
       <section className="py-6 px-6 max-w-5xl mx-auto">
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-8 bg-card border border-border">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">И в какой-то момент заметила:</p>
-            <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— тело стало уставшим и зажатым</p>
-              <p>— рядом с мужчиной пропало спокойствие</p>
-              <p>— всё чаще хочется закрыться</p>
-              <p>— стало меньше лёгкости, радости и желания жить</p>
-              <p>— внутри как будто всё время напряжение</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Этот клуб — не терапия</p>
+            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>Здесь нет глубинной проработки детства, ран и долгих разборов «почему так случилось».</p>
+              <p>Это место, где ты встраиваешь в свою жизнь новое — и тебя поддерживают, когда становится тяжело.</p>
+              <p>Мы не «работаем» над собой через силу, через «надо» и усталость.</p>
             </div>
           </div>
           <div className="p-8 bg-card border border-border">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Этот клуб — место, где ты постепенно начинаешь:</p>
-            <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— выдыхать</p>
-              <p>— расслабляться</p>
-              <p>— снова слышать себя</p>
-              <p>— чувствовать лёгкость в теле</p>
-              <p>— переставать жить «через силу»</p>
-              <p>— возвращать вкус к жизни</p>
-              <p>— расправлять свои крылышки рядом с собой, а не сжиматься от тревоги</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Мы встраиваем новое:</p>
+            <div className="space-y-1 text-sm font-light leading-relaxed text-muted-foreground mb-5">
+              <p>— поведение</p>
+              <p>— мышление</p>
+              <p>— голос</p>
+              <p>— границы</p>
+              <p>— тело</p>
+              <p>— привычки</p>
+              <p>— отношения</p>
             </div>
+            <p className="text-sm font-light text-muted-foreground italic">…в реальную жизнь не в теории. Так, чтобы оно становилось вашим естественным состоянием.</p>
+          </div>
+        </div>
+        <div className="mt-4 p-6 bg-accent/20 border border-accent/30">
+          <p className="text-sm font-light leading-relaxed text-foreground/80">
+            И мы делаем это не только через понимание «в голове», а ещё через тело, через его память, через его реакции.
+          </p>
+        </div>
+        <div className="mt-4 p-8 bg-card border border-border">
+          <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Сюда приходят, когда:</p>
+          <div className="space-y-1 text-sm font-light text-muted-foreground">
+            <p>— уже поняла, что «так больше нельзя»</p>
+            <p>— уже начала слышать себя</p>
+            <p>— но боишься, что одна не удержишь новое состояние</p>
           </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* FOR WHOM */}
       <section id="forwhom" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-6">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Аудитория</p>
-          <h2 className="font-cormorant text-4xl font-light leading-snug">Кому подойдёт</h2>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Для кого этот клуб</h2>
+        </div>
+        <div className="mb-4 p-8 bg-card border border-border">
+          <p className="text-sm font-light leading-relaxed text-muted-foreground">
+            Ты пока не готова к глубокой индивидуальной работе, но хочешь уже сейчас начать: выдыхать, расслаблять тело, слышать себя — и быть в пространстве, где тебя понимают.
+          </p>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-8 bg-card border border-border">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Это для тебя, если:</p>
-            <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— ты устала тащить всё на себе</p>
-              <p>— рядом с мужчиной часто тревожно и тяжело</p>
-              <p>— тебе сложно говорить о своих желаниях</p>
-              <p>— ты боишься конфликтов и чужой реакции</p>
-              <p>— внутри много усталости и напряжения</p>
-              <p>— хочется просто спокойно жить, а не всё время держаться</p>
-              <p>— пропадает желание близости и ты не понимаешь, что с тобой происходит</p>
-              <p>— хочется снова чувствовать себя женщиной, а не человеком, который всё терпит</p>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Вы здесь, если слишком долго:</p>
+            <div className="space-y-1 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— терпели и молчали</p>
+              <p>— боялись обидеть или разозлить</p>
+              <p>— соглашались на близость, когда внутри было «не хочу»</p>
+              <p>— жили так, будто всё время нужно быть удобной и сильной</p>
             </div>
           </div>
-          <div className="p-8 bg-primary text-primary-foreground border border-primary flex flex-col justify-center">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/60 mb-6">И внутри всё чаще:</p>
-            <blockquote className="font-cormorant text-3xl font-light leading-relaxed text-primary-foreground">
-              «я хочу снова почувствовать себя живой»
-            </blockquote>
+          <div className="p-8 bg-card border border-border">
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">И в какой-то момент заметили:</p>
+            <div className="space-y-1 text-sm font-light leading-relaxed text-muted-foreground">
+              <p>— камень в груди, ком в горле, будто нечем дышать</p>
+              <p>— болит спина, шея, а врачи говорят «всё нормально»</p>
+              <p>— тело стало уставшим, зажатым, тяжёлым</p>
+              <p>— рядом с ним пропало спокойствие</p>
+              <p>— всё чаще хочется закрыться, отвернуться, молчать</p>
+              <p>— лёгкость, радость и желание жить куда-то ушли</p>
+              <p>— внутри — как будто всё время напряжение, даже когда «всё нормально»</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* WHAT HAPPENS */}
       <section id="how" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-6">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Формат</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Что происходит<br />в клубе</h2>
         </div>
         <div className="grid md:grid-cols-3 gap-6 mb-6">
           {[
-            { icon: "Video", title: "Живые встречи", desc: "Регулярные встречи, где ты можешь прийти со своим состоянием «как есть»" },
-            { icon: "Heart", title: "Разборы ситуаций", desc: "Разборы ситуаций участниц, в которых ты начинаешь узнавать себя" },
-            { icon: "Feather", title: "Мягкие практики", desc: "Практики, которые помогают расслабить тело, выдохнуть и вернуть контакт с собой" },
+            { icon: "MessageCircle", title: "Честные разговоры", desc: "Обо всей жизни женщины: почему тело сжимается, почему молчим, как перестать жить на автомате" },
+            { icon: "Activity", title: "Психосоматика", desc: "Разбираем, что тело пытается сказать через камень в груди, ком в горле, боль в спине и шее" },
+            { icon: "Feather", title: "Мягкие практики", desc: "Помогают расслабить то, что годами было зажато, выдохнуть и вернуть контакт с собой" },
           ].map((item) => (
             <div key={item.title} className="p-8 bg-card border border-border hover:border-accent transition-colors duration-300">
               <Icon name={item.icon} fallback="Circle" size={20} className="text-primary mb-4" />
@@ -163,81 +177,166 @@ export default function Index() {
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-8 bg-card border border-border">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Разговоры о том:</p>
-            <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— почему тело сжимается рядом с мужчиной</p>
-              <p>— почему хочется отдалиться</p>
-              <p>— почему пропадает желание близости</p>
-              <p>— почему так страшно сказать: «я не хочу»</p>
-            </div>
+            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Поддержка в чате</p>
+            <p className="text-sm font-light leading-relaxed text-muted-foreground">Чтобы не откатываться в молчание и напряжение. Пространство, где не нужно быть сильной, правильной и удобной.</p>
           </div>
-          <div className="p-8 bg-card border border-border">
-            <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-5">Пространство, где не нужно быть:</p>
-            <div className="space-y-2 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— сильной</p>
-              <p>— правильной</p>
-              <p>— удобной</p>
-            </div>
-            <p className="mt-6 text-sm font-light italic text-foreground/70 leading-relaxed">
-              Это место, где ты постепенно перестаёшь выживать и начинаешь жить.
-            </p>
+          <div className="p-8 bg-primary text-primary-foreground border border-primary flex flex-col justify-center">
+            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/60 mb-6">…и это ещё не всё</p>
+            <blockquote className="font-cormorant text-2xl font-light leading-relaxed text-primary-foreground">
+              «Здесь не нужно быть сильной»
+            </blockquote>
           </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
+
+      {/* SKILLS */}
+      <section className="py-6 px-6 max-w-5xl mx-auto">
+        <div className="mb-6">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Навыки</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Чему мы учимся в клубе</h2>
+          <p className="text-sm font-light text-muted-foreground mt-3">Клуб — это не только практики для тела и разговоры о боли. Это ещё и реальные навыки новой жизни. Шаг за шагом, с примерами, в поддержке.</p>
+        </div>
+        <div className="grid md:grid-cols-2 gap-6">
+          {[
+            {
+              title: "О новом поведении",
+              items: [
+                "Как поступать по-другому в той самой ситуации, где раньше ты всегда молчала",
+                "Как не сжиматься, когда он подходит обнять",
+                "Как говорить «нет» и не проваливаться в вину",
+                "Как перестать быть удобной и «хорошей»",
+                "Как не спасать его и не брать на себя его ответственность",
+              ]
+            },
+            {
+              title: "О новом мышлении",
+              items: [
+                "Почему ты годами думала, что «терпеть — это любовь»",
+                "Откуда взялось убеждение «если я скажу о себе — меня бросят»",
+                "Как перестать оправдывать его поведение и обвинять себя",
+                "Почему выбирать себя — это не эгоизм",
+              ]
+            },
+            {
+              title: "О том, как перестать молчать",
+              items: [
+                "Почему горло перехватывает, когда нужно сказать важное",
+                "Как произносить «мне больно», «я не хочу», «со мной так нельзя» — без страха",
+                "Как говорить о своих чувствах и спрашивать о его чувствах",
+                "Как учиться разговаривать открыто",
+              ]
+            },
+            {
+              title: "О личных границах",
+              items: [
+                "Где заканчиваетесь вы и начинается он",
+                "Почему трудно сказать «нет» и как это менять",
+                "Как не брать на себя его эмоции, обиды и ответственность",
+                "Что значит «моё тело сказало нет» — и почему это важно",
+              ]
+            },
+            {
+              title: "О доверии и радости",
+              items: [
+                "Как учиться доверять и делить ответственность, а не тащить всё одной",
+                "Как принимать заботу от него — и проявлять в ответ",
+                "Как осознанно радовать себя — даже мелочами",
+                "Как говорить себе комплименты и замечать свои победы",
+              ]
+            },
+            {
+              title: "О телесной памяти",
+              items: [
+                "Каждый раз, когда у вас получилось по-новому — обязательно радоваться",
+                "Говорить: «я смогла», «ура», «я могу», «получилось!»",
+                "Тереть ладошки, обнимать себя, плясать, подпрыгивать",
+                "Чтобы старые сценарии уходили, а новые привычки записывались в теле — радостью, а не через силу",
+              ]
+            },
+          ].map((block) => (
+            <div key={block.title} className="p-8 bg-card border border-border">
+              <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-4">{block.title}</p>
+              <div className="space-y-1 text-sm font-light leading-relaxed text-muted-foreground">
+                {block.items.map((item, i) => (
+                  <p key={i}>— {item}</p>
+                ))}
+              </div>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Divider />
 
       {/* RESULT */}
       <section id="result" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="mb-8">
+        <div className="mb-6">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Итог</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Что ты получишь</h2>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
+          <div className="p-8 bg-card border border-border space-y-1 text-sm font-light leading-relaxed text-muted-foreground">
+            <p>— Ты перестаёшь бояться откатов — есть место, где помогут вернуться</p>
+            <p>— Ты начинаешь замечать тот момент, где раньше автоматически молчала</p>
+            <p>— Ты учишься говорить о себе — без страха и вины</p>
+            <p>— Ты перестаёшь жить «на автомате» и начинаешь выбирать себя осознанно</p>
+            <p>— Ты учишься просить помощь и принимать заботу</p>
+            <p>— Ты учишься благодарить и хвалить — себя и его</p>
+            <p>— Ты начинаешь радоваться своим победам</p>
+          </div>
+          <div className="p-8 bg-card border border-border space-y-1 text-sm font-light leading-relaxed text-muted-foreground">
+            <p>— Камень в груди начинает отпускать</p>
+            <p>— Горло перестаёт сжиматься, когда нужно сказать важное</p>
+            <p>— Напряжение в спине и шее постепенно уходит</p>
+            <p>— Тело начинает расслабляться рядом с мужчиной</p>
+            <p>— Внутри становится тише и спокойнее</p>
+            <p>— Появляется ощущение безопасности, которого давно не хватало</p>
+            <p>— И постепенно возвращается вкус к жизни</p>
+          </div>
+        </div>
+      </section>
+
+      <Divider />
+
+      {/* HOW WORK */}
+      <section className="py-6 px-6 max-w-5xl mx-auto">
+        <div className="mb-6">
+          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Путь</p>
+          <h2 className="font-cormorant text-4xl font-light leading-snug">Как устроена<br />работа со мной</h2>
+        </div>
+        <div className="grid md:grid-cols-3 gap-6">
           <div className="p-8 bg-card border border-border">
-            <div className="space-y-3 text-sm font-light leading-relaxed text-muted-foreground">
-              <p>— внутри становится тише и спокойнее</p>
-              <p>— тело начинает расслабляться рядом с мужчиной</p>
-              <p>— появляется больше лёгкости и воздуха внутри</p>
-              <p>— ты начинаешь лучше слышать себя и свои желания</p>
-              <p>— уменьшается страх: «если я скажу о себе — меня не поймут»</p>
-              <p>— появляется ощущение безопасности, которого так давно не хватало</p>
-              <p>— постепенно возвращается желание жить, радоваться, смеяться, дышать полной грудью</p>
-              <p>— ты перестаёшь всё время сжиматься и начинаешь снова расправляться внутри</p>
+            <p className="font-cormorant text-2xl font-light mb-3">Сначала сопровождение</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">индивидуально</p>
+            <div className="space-y-1 text-sm font-light text-muted-foreground">
+              <p>— Находим причины, почему так сложилось</p>
+              <p>— Ищем корни старых сценариев</p>
+              <p>— Прорабатываем терапией</p>
             </div>
           </div>
-          <div className="p-8 bg-primary text-primary-foreground border border-primary flex flex-col justify-center gap-4">
-            <p className="text-xs uppercase tracking-[0.2em] text-primary-foreground/60">И появляется ощущение:</p>
-            <p className="font-cormorant text-2xl font-light text-primary-foreground">«мне можно быть собой»</p>
+          <div className="p-8 bg-card border border-border">
+            <p className="font-cormorant text-2xl font-light mb-3">Потом клуб</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">закрепление</p>
+            <div className="space-y-1 text-sm font-light text-muted-foreground">
+              <p>— Учимся жить по-новому</p>
+              <p>— Закрепляем изменения</p>
+              <p>— Не откатываемся назад</p>
+            </div>
           </div>
-        </div>
-      </section>
-
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
-
-      {/* IMPORTANT */}
-      <section id="important" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-4">
-          <div className="md:col-span-1">
-            <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Важно</p>
-            <h2 className="font-cormorant text-4xl font-light leading-snug">Важно<br />знать</h2>
-          </div>
-          <div className="md:col-span-2 flex flex-col justify-center gap-4 pt-4">
-            <p className="text-base font-light leading-relaxed text-muted-foreground">
-              Это не место, где тебя будут ломать или заставлять резко менять жизнь.
-            </p>
-            <p className="text-base font-light leading-relaxed text-muted-foreground">Это пространство, где ты постепенно:</p>
-            <div className="space-y-2 text-base font-light leading-relaxed text-muted-foreground">
-              <p>— возвращаешь себя себе</p>
-              <p>— учишься выбирать себя без чувства вины</p>
-              <p>— перестаёшь жить в постоянном напряжении</p>
-              <p>— и снова начинаешь чувствовать вкус к жизни</p>
+          <div className="p-8 bg-primary text-primary-foreground border border-primary">
+            <p className="font-cormorant text-2xl font-light mb-3">Или сразу клуб</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">если не готова к глубокой работе</p>
+            <div className="space-y-1 text-sm font-light text-primary-foreground/90">
+              <p>— Начинаете с малого: выдыхать, расслабляться, слышать себя</p>
+              <p>— А позже, при желании, идёте в сопровождение</p>
             </div>
           </div>
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* ABOUT */}
       <section id="about" className="py-6 px-6 max-w-5xl mx-auto">
@@ -271,11 +370,11 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* TARIFFS */}
       <section id="tariffs" className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="mb-10">
+        <div className="mb-6">
           <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Участие</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug">Форматы участия</h2>
         </div>
@@ -288,7 +387,16 @@ export default function Index() {
             <h3 className="font-cormorant text-3xl font-light mb-5">9 месяцев</h3>
             <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">Что внутри:</p>
             <ul className="space-y-2 mb-6">
-              {["Еженедельные встречи", "Поддержка в чате", "Разборы состояний и жизненных ситуаций", "Мягкие телесные практики", "Работа с темой отношений, безопасности, тела и близости", "База «Записи и практики»"].map((f) => (
+              {[
+                "Еженедельные встречи",
+                "Поддержка в чате",
+                "Честные разговоры обо всей жизни женщины",
+                "Разборы психосоматических симптомов: камень в груди, ком в горле, боль в спине и шее",
+                "Навыки новой жизни: просить помощь, говорить комплименты, доверять, радоваться, хвалить себя",
+                "Практики, которые переписывают телесную память",
+                "Мягкие телесные практики для расслабления и выдоха",
+                "База «Записи и практики»",
+              ].map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm font-light">
                   <Icon name="Check" size={14} className="mt-0.5 shrink-0 text-primary-foreground/70" />
                   <span className="text-primary-foreground/90">{f}</span>
@@ -297,10 +405,11 @@ export default function Index() {
             </ul>
             <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">Результат:</p>
             <div className="space-y-1 mb-8 text-sm font-light text-primary-foreground/90">
-              <p>— ты перестаёшь жить в постоянном напряжении</p>
-              <p>— тело начинает чувствовать больше спокойствия и лёгкости</p>
-              <p>— становится легче говорить о себе и своих желаниях</p>
-              <p className="italic mt-3">«я живая» · «я могу дышать» · «мне снова хочется жить»</p>
+              <p>— Ты перестаёшь жить в постоянном напряжении</p>
+              <p>— Тело начинает чувствовать больше спокойствия и лёгкости</p>
+              <p>— Становится легче говорить о себе и своих желаниях</p>
+              <p>— Ты учишься жить по-новому — без предательства себя</p>
+              <p className="italic mt-3">«Я живая» · «Я могу дышать полной грудью» · «Мне снова хочется жить»</p>
             </div>
             <div className="font-cormorant text-3xl font-light mb-4">35 000 ₽ / 9 месяцев</div>
             <div className="text-sm font-light tracking-wide flex items-center gap-2 text-primary-foreground">
@@ -315,25 +424,29 @@ export default function Index() {
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-1">Гостевой доступ</p>
             <h3 className="font-cormorant text-3xl font-light mb-3">1 месяц</h3>
             <p className="text-sm font-light text-muted-foreground mb-6 leading-relaxed">
-              Формат, чтобы познакомиться с клубом, почувствовать атмосферу и увидеть первые изменения.
+              Попробовать, не вкладываясь сразу.
             </p>
-            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Ты сможешь:</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Что внутри:</p>
             <ul className="space-y-2 mb-4">
-              {["Прийти на встречи и почувствовать поддержку", "Разобрать свою ситуацию", "Увидеть, как тело связано с тревогой, напряжением и отношениями", "Попробовать практики, после которых внутри становится спокойнее и легче"].map((f) => (
+              {[
+                "Доступ ко всем встречам клуба на месяц",
+                "Ты можешь просто сидеть и слушать — или задать свой вопрос",
+                "Разбор своей ситуации",
+                "Практики, после которых внутри становится спокойнее и легче",
+              ].map((f) => (
                 <li key={f} className="flex items-start gap-3 text-sm font-light">
                   <Icon name="Check" size={14} className="mt-0.5 shrink-0 text-primary" />
                   <span className="text-foreground">{f}</span>
                 </li>
               ))}
             </ul>
-            <p className="text-sm font-light italic text-muted-foreground mb-5">«я не одна» · «со мной всё не так не потому, что я слабая»</p>
-            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Результат:</p>
+            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">Что ты почувствуешь:</p>
             <div className="space-y-1 mb-8 text-sm font-light text-muted-foreground">
-              <p>— внутри становится чуть тише</p>
-              <p>— тело начинает понемногу расслабляться</p>
-              <p>— появляется больше лёгкости и воздуха внутри</p>
-              <p>— начинаешь лучше слышать себя</p>
-              <p className="italic mt-2">«я снова оживаю»</p>
+              <p>— «Я не одна»</p>
+              <p>— «То, что со мной происходит — это не слабость. Это усталость»</p>
+              <p>— Внутри становится чуть тише</p>
+              <p>— Тело начинает понемногу расслабляться</p>
+              <p className="italic mt-2">«Я снова оживаю»</p>
             </div>
             <div className="font-cormorant text-3xl font-light text-foreground mb-4">6 000 ₽</div>
             <div className="text-sm font-light tracking-wide flex items-center gap-2 text-primary">
@@ -343,19 +456,18 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* FINAL BLOCK */}
       <section id="final" className="py-6 px-6 max-w-5xl mx-auto">
         <div className="bg-card border border-border p-10 md:p-14 max-w-2xl mx-auto text-center">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-6">Для кого</p>
           <h2 className="font-cormorant text-4xl font-light leading-snug mb-8">Этот клуб для тебя, если ты устала:</h2>
           <div className="text-base font-light leading-relaxed text-muted-foreground space-y-1 text-left max-w-sm mx-auto mb-8">
             <p>— всё время держаться</p>
             <p>— молчать о себе</p>
             <p>— жить в тревоге и напряжении</p>
             <p>— сжиматься рядом с мужчиной</p>
-            <p>— и чувствовать, как жизнь проходит мимо</p>
+            <p>— чувствовать, как жизнь проходит мимо</p>
           </div>
           <p className="text-base font-light leading-relaxed text-muted-foreground mb-3">Здесь ты постепенно возвращаешь:</p>
           <div className="text-base font-light leading-relaxed text-muted-foreground space-y-1 text-left max-w-xs mx-auto mb-6">
@@ -364,7 +476,13 @@ export default function Index() {
             <p>— лёгкость в теле</p>
             <p>— вкус к жизни</p>
           </div>
-          <p className="font-cormorant text-2xl font-light italic text-foreground/70 mb-10">«я снова живая»</p>
+          <p className="font-cormorant text-2xl font-light italic text-foreground/70 mb-6">«Я снова живая»</p>
+          <div className="text-sm font-light text-muted-foreground space-y-1 mb-10">
+            <p>Клуб «Я есть» — это место, где ты:</p>
+            <p>— не одна · не обязана быть сильной · не боишься откатов</p>
+            <p>— учишься жить по-новому</p>
+            <p className="italic mt-2">Не через «надо». А через жизнь.</p>
+          </div>
           <button
             onClick={() => scrollTo("join")}
             className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
@@ -375,7 +493,7 @@ export default function Index() {
         </div>
       </section>
 
-      <div className="max-w-5xl mx-auto px-6"><div className="h-px bg-border" /></div>
+      <Divider />
 
       {/* JOIN FORM */}
       <section id="join" className="py-6 px-6 max-w-5xl mx-auto">
@@ -478,9 +596,6 @@ export default function Index() {
                   Оставить заявку
                   <Icon name="ArrowRight" size={16} />
                 </button>
-                <p className="text-xs text-muted-foreground font-light text-center">
-                  Нажимая кнопку, вы соглашаетесь с обработкой персональных данных
-                </p>
               </form>
             )}
           </div>
@@ -488,16 +603,26 @@ export default function Index() {
       </section>
 
       {/* FOOTER */}
-      <footer className="border-t border-border py-8 px-6">
-        <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
-          <span className="font-cormorant text-lg font-light tracking-widest text-foreground/50 uppercase">
-            Ирина Пархоменко
-          </span>
-          <p className="text-xs font-light text-muted-foreground">
-            © {new Date().getFullYear()} Женский клуб «Я Есть»
-          </p>
+      <footer className="border-t border-border mt-6">
+        <div className="max-w-5xl mx-auto px-6 py-8 flex flex-col md:flex-row items-center justify-between gap-4">
+          <div>
+            <span className="font-cormorant text-lg font-light tracking-widest text-foreground/60 uppercase">
+              Женский клуб «Я Есть»
+            </span>
+          </div>
+          <div className="flex gap-4">
+            <a href={TG_LINK} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wide">
+              Telegram
+            </a>
+            <a href={MAX_LINK} target="_blank" rel="noopener noreferrer"
+              className="text-xs text-muted-foreground hover:text-foreground transition-colors tracking-wide">
+              Max
+            </a>
+          </div>
         </div>
       </footer>
+
     </div>
   );
 }
