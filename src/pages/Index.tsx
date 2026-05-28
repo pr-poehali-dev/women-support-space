@@ -125,9 +125,13 @@ export default function Index() {
           <h2 className="font-cormorant text-4xl font-light leading-snug">Для кого этот клуб</h2>
         </div>
         <div className="mb-4 p-8 bg-card border border-border">
-          <p className="text-sm font-light leading-relaxed text-muted-foreground">
-            Ты пока не готова к глубокой индивидуальной работе, но хочешь уже сейчас начать: выдыхать, расслаблять тело, слышать себя — и быть в пространстве, где тебя понимают.
-          </p>
+          <p className="text-sm font-light leading-relaxed text-muted-foreground mb-4">Вы пока не готовы к глубокой индивидуальной работе, но хотите уже сейчас начать:</p>
+          <div className="space-y-1 text-sm font-light text-muted-foreground">
+            <p>— выдыхать</p>
+            <p>— расслаблять тело</p>
+            <p>— слышать себя</p>
+            <p>— и быть в пространстве, где тебя понимают</p>
+          </div>
         </div>
         <div className="grid md:grid-cols-2 gap-6">
           <div className="p-8 bg-card border border-border">
@@ -294,44 +298,6 @@ export default function Index() {
             <p>— Внутри становится тише и спокойнее</p>
             <p>— Появляется ощущение безопасности, которого давно не хватало</p>
             <p>— И постепенно возвращается вкус к жизни</p>
-          </div>
-        </div>
-      </section>
-
-      <Divider />
-
-      {/* HOW WORK */}
-      <section className="py-6 px-6 max-w-5xl mx-auto">
-        <div className="mb-6">
-          <p className="text-xs uppercase tracking-[0.25em] text-muted-foreground mb-4">Путь</p>
-          <h2 className="font-cormorant text-4xl font-light leading-snug">Как устроена<br />работа со мной</h2>
-        </div>
-        <div className="grid md:grid-cols-3 gap-6">
-          <div className="p-8 bg-card border border-border">
-            <p className="font-cormorant text-2xl font-light mb-3">Сначала сопровождение</p>
-            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">индивидуально</p>
-            <div className="space-y-1 text-sm font-light text-muted-foreground">
-              <p>— Находим причины, почему так сложилось</p>
-              <p>— Ищем корни старых сценариев</p>
-              <p>— Прорабатываем терапией</p>
-            </div>
-          </div>
-          <div className="p-8 bg-card border border-border">
-            <p className="font-cormorant text-2xl font-light mb-3">Потом клуб</p>
-            <p className="text-xs uppercase tracking-[0.15em] text-muted-foreground mb-3">закрепление</p>
-            <div className="space-y-1 text-sm font-light text-muted-foreground">
-              <p>— Учимся жить по-новому</p>
-              <p>— Закрепляем изменения</p>
-              <p>— Не откатываемся назад</p>
-            </div>
-          </div>
-          <div className="p-8 bg-primary text-primary-foreground border border-primary">
-            <p className="font-cormorant text-2xl font-light mb-3">Или сразу клуб</p>
-            <p className="text-xs uppercase tracking-[0.15em] text-primary-foreground/60 mb-3">если не готова к глубокой работе</p>
-            <div className="space-y-1 text-sm font-light text-primary-foreground/90">
-              <p>— Начинаете с малого: выдыхать, расслабляться, слышать себя</p>
-              <p>— А позже, при желании, идёте в сопровождение</p>
-            </div>
           </div>
         </div>
       </section>
