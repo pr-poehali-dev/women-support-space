@@ -277,6 +277,15 @@ export default function Index() {
             </div>
           ))}
         </div>
+        <div className="mt-8 text-center">
+          <button
+            onClick={() => scrollTo("join")}
+            className="inline-flex items-center gap-3 bg-primary text-primary-foreground px-10 py-4 text-sm font-light tracking-wide hover:bg-primary/90 transition-all duration-300 hover:gap-4"
+          >
+            Хочу в клуб
+            <Icon name="ArrowRight" size={16} />
+          </button>
+        </div>
       </section>
 
       <Divider />
