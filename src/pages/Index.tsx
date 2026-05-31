@@ -404,7 +404,7 @@ export default function Index() {
             onClick={() => { setSelectedTariff("guest"); scrollTo("join"); }}
           >
             <p className="text-xs uppercase tracking-[0.2em] text-muted-foreground mb-1">Гостевой доступ</p>
-            <h3 className="font-cormorant text-3xl font-light mb-3">1 месяц</h3>
+            <h3 className="font-cormorant text-3xl font-light mb-3">21 день</h3>
             <p className="text-sm font-light text-muted-foreground mb-6 leading-relaxed">
               Попробовать, не вкладываясь сразу.
             </p>
